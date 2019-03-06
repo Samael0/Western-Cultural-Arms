@@ -1,0 +1,47 @@
+@ r0,r1,r2,r3,r4,r5 reserved
+@ r6 used for holding number of lost generation members.
+@ r7 used for holding number of greatest generation members.
+@ r8 used for holding number of baby boomer generation members.
+@ r9 used for holding number of generation X members.
+@ r10 used for holding number of Generation Y members.
+@ r11 used for holding number of Generation Z members.
+@ r12 used for holding number of invalid numbers (could be negative or in different ranges).
+
+if(num <= 127){
+    
+    true branch to if(num >= 102){
+        true then it is lost generation
+        add one to r4
+
+        not true branch to if(num >= 93){
+            true then it is greatest generation
+            add one to r5
+
+            not true branch to if(num >= 53){
+                true then it is baby boomer
+                add one to r6
+
+                not true branch to if(num >= 38){
+                    true then it is Generation X
+                    add one to r7
+
+                    not true branch to if(num >= 22){
+                        true then it is Generation Y
+                        add one to r8
+
+                        not true branch to if(num >= 7){
+                            true then it is Generation Z
+                            add one to r9
+
+                            not true branch to not applicable
+                            add one to r10
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    branch to not applicable
+    add one to r10
+}
