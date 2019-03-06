@@ -19,7 +19,6 @@ main:	stmfd	sp!,{lr}
 
 read:	cmp	r0,r2
 	beq	prtlg
-	ldr	r3,r1,r3
 	ldr	r1,[r3]
 	add	r1,#4
 	add	r0,r0,#1
